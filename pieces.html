@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Marques d'appareils</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div id="app">
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nom_marque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="marques in marque.data">
+                        <td>{{ marques.id }}</td>
+                        <td>{{ marques.nom_marque }}</td>
+                    </tr>
+                </tbody>
+            </table>    
+            
+        </div>          
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nom_type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="types in type.data">
+                        <td>{{ types.id }}</td>
+                        <td>{{ types.nom_type }}</td>
+                    </tr>
+                </tbody>
+            </table>    
+        </div>
+
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Nom</th>
+                        <th>photo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="pieces in piece.data">
+                        <td>{{ pieces.id }}</td>
+                        <td>{{ pieces.nom }}</td>
+                        <td>{{ pieces.photo }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+ 
